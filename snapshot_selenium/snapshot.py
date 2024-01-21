@@ -35,6 +35,8 @@ def make_snapshot(
             driver = get_chrome_driver()
         elif browser == "Safari":
             driver = get_safari_driver()
+        elif browser == "Edge":
+            driver = get_edge_driver()
         else:
             raise Exception("Unknown browser!")
 
@@ -60,3 +62,7 @@ def get_chrome_driver():
 
 def get_safari_driver():
     return webdriver.Safari()
+
+
+def get_edge_driver():
+    return webdriver.Edge()
